@@ -1,0 +1,21 @@
+.dot{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 10rem;
+    border: 2px solid $color--primary--yellow;
+    background: none;
+    cursor: pointer;
+    transition: .4s;
+    &.selected{
+        background: $color--primary--yellow;
+    }
+    &:not(:last-child){
+        margin-right: 1rem;
+    }
+    &.active{
+        display: block;
+    }
+    &.deactive{
+        display: none;
+    }
+}

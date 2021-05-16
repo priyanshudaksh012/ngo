@@ -1,0 +1,121 @@
+.slideshow{
+    height: 60rem;
+    width: 100%;
+    overflow: hidden;
+    background-color: $color--primary--black;
+    &__container{
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+}
+
+.slide{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transition: .4s;
+    will-change: transform;
+
+    &--1{
+        display: block;
+        background-image: url(../images/banner2.jpg);
+    }
+    &--2{
+        display: none;
+        background-image: url(../images/banner3.jpg);
+    }
+    &--3{
+        display: none;
+        background-image: url(../images/banner1.jpg);
+    }
+
+    &__contentbox{
+        width: 39rem;
+        position: relative;
+        top: 10rem;
+        left: 10rem;
+
+        @media only screen and (max-width: 48em){
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        @media only screen and (max-width: 28.125em){
+            width: 100%;
+            padding: 0 3rem;
+        }
+
+    }
+    &__cause{
+        text-transform: uppercase;
+        line-height: 1.7rem;
+        border-width: 2px;
+        margin: 0px;
+        padding: .6rem 1.2rem;
+        letter-spacing: 0px;
+        background: $color--primary--yellow;
+        width: fit-content;
+        border-style: solid;
+        border-color: $color--primary--yellow;
+        font-weight: bold;
+    }
+    &__heading{
+        color: #fff;
+    }
+    
+     &__heading2{
+        color: #000;
+    }
+    
+    &__title{
+        color: #fff;
+        font-weight: 300;
+        margin-bottom: 3rem;
+    }
+    
+    &__title2{
+        color: #000;
+        font-weight: 300;
+        margin-bottom: 3rem;
+    }
+    &__paragraph{
+        line-height: 1.5;
+        color: #fff;
+    }
+    
+     &__paragraph2{
+        line-height: 1.5;
+        color: #000;
+         
+    }
+    
+    &__button{
+        margin-top: 2rem;
+        color: #fff;
+    }
+    
+    &__button2{
+        margin-top: 2rem;
+        color: #000;
+    }
+
+    &__dots{
+        position: absolute;
+        bottom: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+    }
+
+    &__dot{
+        
+    }
+
+}

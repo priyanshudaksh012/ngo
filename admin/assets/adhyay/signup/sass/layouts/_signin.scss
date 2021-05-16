@@ -1,0 +1,168 @@
+.signin{
+    background-color: #fff;
+    opacity: 0;
+
+    &.select{
+        opacity: 1;
+        transition: .3s ease-in-out .3s;
+        display: block;
+    }
+    
+    &__container{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        border-bottom-right-radius: 30rem;
+        border-top-left-radius: 30rem;
+        @media only screen and (max-width: 64em){
+            min-height: calc(100vh - 56px);
+            height: unset;
+        }
+        &--imagebox{
+            width: 10rem;
+            height: 10rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        &--image{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+        &--heading{
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #fff;
+        }
+        &--form{
+            width: 40rem;
+            padding: 1rem;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &--formheading{
+            font-size: 2rem;
+            font-weight: 400;
+            width: 100%;
+            color: #fff;
+        }
+        &--formparagraph{
+            font-size: 1.6rem;
+            font-weight: 200;
+            width: 100%;
+            color: #fff;
+        }
+        &--textbox{
+            width: 100%;
+            height: 4rem;
+            border-radius: .6rem;
+            background-color: #f5f5f5;
+            position: relative;
+            margin-top: 1rem;
+        }
+        &--text{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            outline: none;
+            padding: .5rem 1.5rem;
+            color: #000;
+            font-weight: 400;
+        }
+        &--text:focus + &--label{
+            top: .5rem;
+            font-size: 1rem;
+        }
+
+        &--text.select + &--label{
+            top: .5rem;
+            font-size: 1rem;
+        }
+        &--label{
+            position: absolute;
+            top: 50%;
+            left: 1.5rem;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            color: #777;
+            transition: .3s;
+        }
+        &--eye{
+            position: absolute;
+            top: 50%;
+            right: .7rem;
+            height: 1.5rem;
+            width: 1.5rem;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        &--button{
+            margin-top: 1rem;
+            width: 100%;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: .6rem;
+            cursor: pointer;
+            background-color: #2574b8;
+            color: #fff;
+            font-weight: 600;
+            position: relative;
+            transition: .3s;
+            &.select{
+                width: 4rem;
+                border-radius: 4rem;
+            }
+            & span{
+
+            }
+        }
+        &--button.select &--loader{
+            animation: loader 2s infinite alternate-reverse;
+            animation-delay: .3s;
+            opacity: 1;
+            stroke: #fff;
+        }
+        &--loader{
+            height: 3.5rem;
+            width: 3.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            stroke-dasharray: 126;
+            stroke-dashoffset: 126;
+            fill: transparent;
+            stroke:transparent;
+            opacity: 0;
+            transition: all 0.3 ease-in-out .3s;
+        }
+        &--link{
+            margin-top: 1rem;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+        }
+        &--signup{
+            color: #fff;
+            text-align: center;
+            & span{
+                color: #2574b8;
+                cursor: pointer;
+            }
+        }
+    }
+}

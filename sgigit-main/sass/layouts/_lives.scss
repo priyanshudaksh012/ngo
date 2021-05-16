@@ -1,0 +1,47 @@
+.lives{
+    width: 60rem;
+
+    @media only screen and (max-width: 48em){
+        width: 100%;   
+    }
+
+    &__container{
+        background-image: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)), url(../images/about-back2.jpg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    &__paragraph{
+        font-weight: 400;
+        text-align: center;
+        color: $color--primary--black;
+        margin-bottom: 3rem;
+    }
+    &__buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    &__button{
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+
+        @media only screen and (max-width: 48em){
+            font-size: 1.4rem;
+        }
+
+        @media only screen and (max-width: 28.125rem){
+            padding: .85rem 1rem;
+        }
+        
+        &:first-child{
+            margin-right: 2rem;
+        }
+    }
+}

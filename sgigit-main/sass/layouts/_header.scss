@@ -1,0 +1,77 @@
+.header{
+    height: 12rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 26.125em){
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        height: 18rem;
+    }
+
+    &__logo{
+        width: 22rem;
+        object-fit: contain;
+        object-position: center center;
+        
+        &--link{
+            margin-right: auto;
+            margin-left: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            @media only screen and (max-width: 26.125em){
+                margin-top: 1rem;
+                margin-left: 0;
+            }
+
+        }
+    }
+
+    &__social{
+        height: 3rem;
+        display: flex;
+
+        @media only screen and (max-width: 48em){
+            display: none;
+        }
+
+        &--link{
+            display: block;
+            height: 100%;
+            width: 3rem;
+            margin-right: 1.5rem;
+        }
+
+        &--icon{
+            height: 100%;
+            width: 100%;
+            object-position: center center;
+            object-fit: contain;
+            fill: $color--primary--black;
+            transition: .2s;
+
+            &:hover{
+                fill: $color--primary--grey;
+            }
+
+        }
+    }
+
+    &__subscribe{
+        margin-right: 1rem;
+        @media only screen and (max-width: 48em){
+            
+        }
+        @media only screen and (max-width: 26.125em){
+            margin-top: 1rem;
+            margin-right: 0;
+        }
+    }
+
+
+}

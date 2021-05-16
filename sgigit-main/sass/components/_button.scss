@@ -1,0 +1,41 @@
+.button{
+    padding: 1.1rem 3.1rem;
+    color: #31400c;
+    font-size: 12px;
+    font-weight: bolder;
+    border-color: #d6b13d;
+    border-width: 1px;
+    text-transform: uppercase;
+    border-style: solid;
+    transition: .4s;
+    display: inline-block;
+    word-spacing: 3px;
+    background: transparent;
+    cursor: pointer;
+    &:hover{
+        background: $color--primary--yellow;
+        border-color: #31400c;
+    }
+
+}
+
+.button2{
+    padding: 1.1rem 3.1rem;
+    color: #31400c;
+    font-size: 12px;
+    font-weight: bolder;
+    border-color: #27211d;
+    border-width: 1px;
+    text-transform: uppercase;
+    border-style: solid;
+    transition: .4s;
+    display: inline-block;
+    word-spacing: 3px;
+    background: transparent;
+    cursor: pointer;
+    &:hover{
+        background: $color--primary--yellow;
+        border-color: #31400c;
+    }
+
+}

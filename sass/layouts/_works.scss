@@ -1,0 +1,38 @@
+.works{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 3rem;
+    grid-auto-rows: auto;
+    justify-content: center;
+
+    @media only screen and (max-width: 64em){
+        grid-template-columns: repeat(2,30rem);
+    }
+
+    @media only screen and (max-width: 48em){
+        grid-template-columns: 35rem;   
+    }
+
+}
+.work{
+    &__heading{
+        color: $color--secondary--black;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+    }
+    &__image{
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+    }
+    &__paragraph{
+        margin: 1.5rem 0;
+        color: #121617;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    &__button{
+
+    }
+}

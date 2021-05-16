@@ -1,0 +1,55 @@
+.team{
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,35rem);
+    grid-auto-rows: auto;
+    grid-gap: 3rem;
+    justify-content: center;
+
+    @media only screen and (max-width: 64em){
+        grid-template-columns: repeat(2,30rem);
+    }
+
+    @media only screen and (max-width: 48em){
+        grid-template-columns: 35rem;   
+    }
+
+    &__member{
+        width: 100%;
+        position: relative;
+    }
+    &__image{
+        width: 100%;
+        object-fit: cover;
+        height: 20rem;
+        margin-bottom: 1.5rem;
+    }
+    &__name{
+        color: $color--primary--black;
+        font-weight: 300;
+        text-align: center;
+    }
+    &__icons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    &__link{
+        display: inline-block;
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+    &__icon{
+        height: 2.5rem;
+        width: 2.5rem;
+        fill: $color--primary--black;
+        transition: .4s;
+        &:hover{
+            fill: $color--primary--grey;
+        }
+    }
+}

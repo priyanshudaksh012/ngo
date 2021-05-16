@@ -1,0 +1,119 @@
+.blog{
+    width: 100%;
+    padding: 8rem;
+
+    @media only screen and (max-width: 64em){
+        padding: 5rem;
+    }
+
+    @media only screen and (max-width: 28.125em){
+        padding: 2rem;
+    }
+
+    &__content{
+        position: relative;
+    }
+    &__image{
+        height: 50rem;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 3rem;
+
+        @media only screen and (max-width: 48em){
+            height: 30rem;
+        }
+
+    }
+    &__heading{
+        color: $color--primary--black;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        @media only screen and (max-width: 48em){
+            font-size: 2.6rem;
+        }
+    }
+    &__paragraph{
+        font-weight: 300;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+        color: $color--primary--grey;
+    }
+    &__button{
+        margin-bottom: 3rem;
+    }
+    &__line{
+        height: 1px;
+        width: 100%;
+        background-color: $color--primary--grey;
+        margin-bottom: 5rem;
+    }
+    &__video{
+        height: 50rem;
+        width: 100%;
+        margin-bottom: 3rem;
+        @media only screen and (max-width: 48em){
+            height: 30rem;
+        }
+    }
+    &__commentBox{
+        padding: 5rem;
+        text-align: center;
+        background-color: #ddd8c7;
+        margin-bottom: 5rem;
+        @media only screen and (max-width: 48em){
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+    }
+    &__comment{
+        line-height: 1.8;
+        font-weight: 200;
+        color: $color--primary--black;
+        margin-bottom: 2rem;
+        @media only screen and (max-width: 48em){
+            line-height: normal;
+            font-size: 2.2rem;
+        }
+    }
+    &__author{
+        color: $color--secondary--black;
+        text-transform: uppercase;
+    }
+    &__news{
+        position: relative;
+        margin-bottom: 3rem;
+    }
+    &__figure{
+        height: 50rem;
+        width: 100%rem;
+        margin-bottom: 3rem;
+
+        @media only screen and (max-width: 48em){
+            height: 30rem;
+        }
+
+
+        &--left{
+            
+        }
+        &--right{
+            
+        }
+        &--image{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &__list{
+        margin-bottom: 2rem;
+        padding-left: 5rem;
+    }
+    &__listItem{
+        list-style: disc;
+        line-height: 1.6;
+        color: $color--primary--grey;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+}

@@ -1,0 +1,28 @@
+
+
+.dropdown,.dropdown2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: $color--primary--yellow;
+    z-index: 1500;
+
+    display: none;
+    flex-direction: column;
+    transition: .5s;
+
+    &__link{
+        display: block;
+        padding: 1.25rem 3rem;
+        color: #000;
+        position: relative;
+        transition: .5s;
+
+        &:hover{
+            background-color: #fff;
+        }
+
+    }
+
+}

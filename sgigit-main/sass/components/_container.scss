@@ -1,0 +1,19 @@
+.container{
+    padding: 6rem 6rem;
+
+    @media only screen and (max-width: 28.125em){
+        padding: 3rem;
+    }
+
+    &__heading{
+        text-align: center;
+        font-weight: 300;
+        margin-bottom: 4rem;
+        margin-top:2rem;
+        color: $color--primary--black;
+        & strong{
+            padding-bottom: 3px;
+            border-bottom: 2px solid $color--primary--yellow;
+        }
+    }
+}

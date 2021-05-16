@@ -1,0 +1,23 @@
+@keyframes slideIN{
+    0%{
+        left: 100%;
+    }
+    50%{
+        left: 0;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes slideOUT{
+    0%{
+        left: 0%;
+    }
+    50%{
+        left: -100%;
+    }
+    100%{
+        left: -100%;
+    }
+}

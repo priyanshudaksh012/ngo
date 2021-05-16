@@ -1,0 +1,59 @@
+.africa{
+    height: 50rem;
+    background-image: url(../images/about-back.jpg);
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    &::before{
+        content: '';
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+    &__content{
+        position: relative;
+        width: 40rem;
+        top: 50%;
+        left: 5rem;
+        transform: translateY(-50%);
+        z-index: 2;
+
+        @media only screen and (max-width: 28.125em){
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            padding: 0 3rem;
+        }
+
+    }
+    &__heading{
+        position: relative;
+        margin-bottom: 3rem;
+        color: #fff;
+        font-weight: 300;
+        & strong{
+            font-weight: 600;
+            padding-bottom: 3px;
+            border-bottom: 2px solid $color--primary--yellow;
+        }
+    }
+    &__pargraph{
+        position: relative;
+        color: #fff;
+    }
+    &__button{
+        position: relative;
+        margin-top: 3rem;
+        color: #fff;
+    }
+}

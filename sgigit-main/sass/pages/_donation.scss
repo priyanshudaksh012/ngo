@@ -1,0 +1,61 @@
+.donation{
+    &__image{
+        width: 100%;
+        object-fit: cover;
+        height: 45rem;
+        @media only screen and (max-width: 48em){
+            height: 30rem;
+        }
+
+    }
+    &__steps{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 2rem;
+        grid-auto-rows: auto;
+        @media only screen and (max-width: 48em){
+            grid-template-columns: repeat(2,1fr);
+        }
+        @media only screen and (max-width: 28.125em){
+            grid-template-columns: 1fr;
+        }
+
+
+    }
+    &__step{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__circle{
+        height: 13rem;
+        width: 13rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10rem;
+        background-color: $color--primary--yellow;
+        margin-bottom: 2rem;
+    }
+    &__heading{
+        font-weight: 200;
+        color: $color--primary--black;
+        
+    }
+    &__paragraph{
+        margin-bottom: 2rem;
+    }
+    &__details{
+        color: $color--primary--grey;
+        font-weight: 600;
+    }
+    &__button{
+        margin-top: 5rem;
+        text-align: center;
+        display: flex;
+    }
+}

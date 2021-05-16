@@ -1,0 +1,94 @@
+.popup{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000000;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 3rem 15rem;
+    color: #000;
+    overflow: auto;
+
+    transform: scale(.30);
+    opacity: 0;
+    visibility: hidden;
+
+    transition: transform .5s, opacity .5s;
+
+    @media only screen and (max-width: 48em){
+        padding: 3rem;
+    }
+
+    &:target{
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__container{
+        background-color: #fff;
+        padding: 2rem;
+    }
+    
+    &__header{
+        background-color: #ccc;
+        padding: 2rem;
+        position: relative;
+    }
+    &__paragraph{
+        font-weight: 400;
+        color: #000;
+        position: relative;
+    }
+    &__close{
+        height: 3rem;
+        width: 3rem;
+        background-color: $color--primary--yellow;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+    }
+    &__form{
+        position: relative;
+        background-color: #ddd;
+        display: grid;
+        grid-template-columns: 20rem 1fr;
+        grid-gap: 2rem;
+        padding: 2rem;
+        justify-content: center;
+
+        @media only screen and (max-width: 48em){
+            grid-template-columns: auto 1fr;
+        }
+
+        @media only screen and (max-width: 28.125em){
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+        }
+
+    }
+    &__box{
+        position: relative;
+    }
+    &__radio{
+        display: inline-block;
+        &:last-of-type{
+            margin-left: 2rem;
+        }
+    }
+    &__text{
+
+    }
+    &__textarea{
+
+    }
+    &__button{
+        grid-column: 1/-1;
+        display: inline-block;
+        width: fit-content;
+    }
+}
