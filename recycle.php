@@ -9,6 +9,12 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+
+ <?php
+require('php/function.php');
+$sgi=new SgiFunction();
+$W=$sgi->WasteManagement();
+?>    
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    POPUPS      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     
     <div class="popup" id="popup11">
@@ -250,7 +256,7 @@
                     Recycling plastic waste and management
                 </p>
                 <div class="charity__box">
-                    <img src="images/recycle.jpg" alt="" class="charity__image">
+                    <img src="admin/assets/ngo/<?= $W[0]['path'] ?>" alt="" class="charity__image">
                     <p class="paragraph--4 charity__progressValue" style="display:none;">61.94%</p>
                     <div class="charity__progress" style="display:none;">
                         <div class="charity__progressBar"></div>
@@ -260,43 +266,61 @@
                     Donation: ₹78,354.00 / <span>₹1,26,500.00</span>
                 </p>
                 <p class="paragraph--5 charity__tertiaryDescription" style="padding-top:2rem;">
-                  One of our partner rag pickers working at a dumping site on the outskirts of Dehradun.    
+                  <?= $W[0]['paragraph1'] ?>
                 </p>
                 <a href="#popup11" class="button2 charity__button">Make a Contribution</a>
             </div>
             <p class="paragraph--5 charity__tertiaryDescription">
-                The menace of waste and especially plastic waste is a problem that the world is grappling with. 
+                  <?= $W[0]['paragraph2'] ?>
+
             </p>
 
             <p class="paragraph--5 charity__tertiaryDescription">
-                We carried out several clean up drives with school children, civil society and other NGOs to collect waste littered across our cities. We collected more than 800kgs of waste plastic with this activity 
+                  <?= $W[0]['paragraph3'] ?>
+
             </p>
             <p class="paragraph--5 charity__tertiaryDescription">
-                 Start up Project of IOC ( R &amp; D) Division:
+                      <?= $W[0]['paragraph4'] ?>
+
             </p>
             <p class="paragraph--5 charity__tertiaryDescription">
-                Our project ‘Sustainable Livelihoods from low value waste plastic; was chosen from hundreds of startups by the Indian Oil Corporation Research and Development Division. 
+                  <?= $W[0]['paragraph5'] ?>
+
             </p>
             <p class="paragraph--5 charity__tertiaryDescription">
-                 We are one of the 12 startups being mentored and supported by IOC R&amp;D team to make pavement blocks from low value waste plastic. 
+                  <?= $W[0]['paragraph6'] ?>
+
             </p>
             <p class="paragraph--5 charity__tertiaryDescription">
-                 We work closely with rag pickers and recyclers as a part of the project.
+                  <?= $W[0]['paragraph7'] ?>
+
             </p>
             <p class="paragraph--5 charity__tertiaryDescription">
-                 Our work with Waste workers and rag pickers has led to us processing more than 45000 kgs of plastic waste. We have converted more than 6000 kgs of low value waste plastic to pavement blocks and paved more than 500 sq feet of our own facility with these blocks. 
+                  <?= $W[0]['paragraph8'] ?>
+ 
             </p>
             <p class="paragraph--5 charity__tertiaryDescription">
-                 All our prototypes have been fabricated and designed from scratch by local firms and experts in the field. 
+                  <?= $W[0]['paragraph9'] ?>
+
             </p>
             <p class="paragraph--5 charity__tertiaryDescription">
-               Employment Generated: 
+                  <?= $W[0]['heading'] ?>
+
             </p>
             <ul class="charity__list">
-                <li class="paragraph--5 charity__listItem">We employed two full time staff member to oversee the segregation and brick making operation at the facility</li>
-                <li class="paragraph--5 charity__listItem">We worked with more than 50 rag pickers and 20 kabadis to collect waste plastic and purchased raw material worth 5.5 lakhs from these sources.</li>
-                <li class="paragraph--5 charity__listItem">We employed 5 to 6 contract staff to segregate and make the bricks for us spending more than 2..4 lakhs. </li>
-                <li class="paragraph--5 charity__listItem">We mentor and support a waste management company in Dehradun to find the plastic waste menace.</li>
+                <li class="paragraph--5 charity__listItem">          <?= $W[0]['headinga'] ?>
+                </li>
+
+                <li class="paragraph--5 charity__listItem">
+             <?= $W[0]['headingb'] ?>
+
+                </li>
+                <li class="paragraph--5 charity__listItem">
+            <?= $W[0]['headingc'] ?>
+
+                </li>
+                <li class="paragraph--5 charity__listItem">
+              <?= $W[0]['headingd'] ?>   </li>
             </ul>
                         
             <div class="charity__steps" style="display: none;">
@@ -338,10 +362,10 @@
              <a href="#popup11" class="button charity__button2">Make a Contribution</a>
             
              <p class="paragraph--5 charity__secondaryDescription">
-                Key highlights
+         <?= $W[0]['heading2'] ?>
             </p>
             <p class="paragraph--5 charity__tertiaryDescription2">
-              Number of saplings planted- 12000 in 24 months. Number of students and young citizens addressed through education and awareness sessions are subjected to 2500 and counting. We want to target planting another 15000 saplings across the country with a survival rate of more than 80%. We plan to continue focusing on working with marginal farmers to enhance income and production from small land holdings.
+            <?= $W[0]['paragraph10'] ?>
             </p>
             
             <div class="charity__causes" style="display: none;">
@@ -386,7 +410,7 @@
             </div>
         </div>
         
-      <?php require('recent_activites.php'); ?>
+      <?= require('recent_activites.php'); ?>
     </div>
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    FOOTER      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <footer class="footer">

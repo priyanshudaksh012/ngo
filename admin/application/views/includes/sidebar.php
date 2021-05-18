@@ -34,9 +34,14 @@
   <a href="#"><i class="fa fa-child" aria-hidden="true"></i> <span>Our Cause</span> <span class="menu-arrow"></span></a>
   <ul class="list-unstyled" style="display: none;">
  <li><a class="<?php if($currentURL == base_url("index.php/OurCause/GreeningPlanet")){echo 'active';}?>" href="<?= base_url("index.php/OurCause/GreeningPlanet") ?>">Greening the Planet</a></li>
- <li><a class="<?php if($currentURL == base_url("index.php/OurCause/RecentActivites")){echo 'active';}?>" href="<?= base_url("index.php/OurCause/RecentActivites") ?>">Recent Activites </a></li> 
+ <li><a class="<?php if($currentURL == base_url("index.php/OurCause/RecentActivites")){echo 'active';}?>" href="<?= base_url("index.php/OurCause/RecentActivites") ?>">Recent Activites </a></li>
+ <li><a class="<?php if($currentURL == base_url("index.php/OurCause/WasteManagement")){echo 'active';}?>" href="<?= base_url("index.php/OurCause/WasteManagement") ?>">Waste Management</a></li> 
 
                           </ul>
+
+                             <li class="<?php if($currentURL =='dashboard.php'){echo 'active';}?>">
+                            <a href="<?= base_url('index.php/DashboardC'); ?>"><i class="fa fa-tachometer" aria-hidden="true"></i>Resources</a>
+                        </li>
                 </li>
          
               

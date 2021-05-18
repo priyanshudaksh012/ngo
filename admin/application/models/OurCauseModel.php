@@ -91,6 +91,52 @@ endif;
           'path'=>$path];
       return $this->db->where(['id'=>1])
                      ->update('recent_activites',$set);
+  }//RecentActivitesData
+
+  public function WasteManagementData(){
+return    $this->db->select("*")
+                   ->get("waste_management")->result_array();
+  }//WasteManagementData
+
+  public function WasteManagementUpdate($data){
+          $config = array(
+'upload_path' => "./assets/ngo/",
+'allowed_types' => "gif|jpg|png|jpeg",
+'overwrite' => TRUE,
+'max_height' => "1277",
+'max_width' => "1920"
+);
+$this->load->library('upload', $config);
+$this->upload->do_upload('image');  
+$img=$this->upload->data();
+
+if(!empty($img['file_name'])):
+  $path=$img['file_name'];
+else:
+  $path=$data['path'];
+endif;
+
+   $set=['paragraph1'=>$data['paragraph1'],
+         'paragraph2'=>$data['paragraph2'],
+         'paragraph3'=>$data['paragraph3'],
+         'paragraph4'=>$data['paragraph4'],
+         'paragraph5'=>$data['paragraph5'],
+         'paragraph6'=>$data['paragraph6'],
+         'paragraph7'=>$data['paragraph7'],
+         'paragraph8'=>$data['paragraph8'],
+         'paragraph9'=>$data['paragraph9'],
+         'heading'=>$data['heading'],
+         'headinga'=>$data['headinga'],
+         'headingb'=>$data['headingb'],
+         'headingc'=>$data['headingc'],
+         'headingd'=>$data['headingd'],
+         'path'=>$path,
+         'heading2'=>$data['heading2'],
+         'paragraph10'=>$data['paragraph10']
+         ];
+return $this->db->where(['id'=>1])
+               ->update('waste_management',$set);
+
   }
 
 }

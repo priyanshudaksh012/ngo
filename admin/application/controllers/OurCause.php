@@ -56,6 +56,25 @@ class OurCause extends CI_Controller {
    	}
    }//RecentActivitesUpdate
 
+   public function WasteManagement(){
+   	    $data=$this->O->WasteManagementData();
+   		$this->load->view("includes/header");
+		$this->load->view("includes/sidebar");
+        $this->load->view('waste_management',['D'=>$data]);
+		$this->load->view("includes/footer");
+   }//WasteManagement....
+
+   public function WasteManagementUpdate(){
+   $res= $this->O->WasteManagementUpdate($this->input->post());
+    if($res){
+       $this->session->set_userdata("success","Waste Management Section Updated Successfullly..");
+       redirect("OurCause/WasteManagement");
+    }else{
+       $this->session->set_userdata("danger","Something Went Wrong....");
+       redirect("OurCause/WasteManagement");
+    }
+   }//WasteManagementUpdate...
+
 }
 
 ?>

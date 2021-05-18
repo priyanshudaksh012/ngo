@@ -71,6 +71,15 @@ class SgiFunction{
        return $arr;
     }//RecentActivites
 
+    public function WasteManagement(){
+      $ok=mysqli_query($this->conn(),"SELECT * FROM waste_management");
+      $arr=[];
+      while($k=mysqli_fetch_array($ok)):
+        array_push($arr,$k);
+       endwhile;
+       return $arr;
+    }//WasteManagement
+
   
 
   
